@@ -1,8 +1,8 @@
 class SwiftyDmg < Formula
   desc "Help you create DMG for your app"
   homepage "https://github.com/chocoford/SwiftyDMG"
-  url "https://github.com/chocoford/SwiftyDMG/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "147f83f806cfbf8e9d1654782b938aecd0d30e6d8f67e9ebf10bb9d1c504963c"
+  url "https://github.com/chocoford/SwiftyDMG/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "9e36450b84480810428780f42403298e1405909b737e63e4d398691184e8fad5"
   license "MIT"
   head "https://github.com/chocoford/SwiftyDMG.git"
 
