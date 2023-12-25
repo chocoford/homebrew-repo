@@ -7,7 +7,8 @@ class SwiftyDmg < Formula
   head "https://github.com/chocoford/SwiftyDMG.git"
 
   def install
-    system "make", "install", "prefix=#{prefix}"
+    system "swift", "build", "--disable-sandbox", "-c", "release"
+    bin.install ".build/release/swifty-dmg"
   end
 
   test do
