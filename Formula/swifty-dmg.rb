@@ -1,4 +1,4 @@
-class Swiftydmg < Formula
+class SwiftyDmg < Formula
   desc "Help you create DMG for your app"
   homepage "https://github.com/chocoford/SwiftyDMG"
   url "https://github.com/chocoford/SwiftyDMG/archive/refs/tags/v1.0.0.tar.gz"
