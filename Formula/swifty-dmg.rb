@@ -9,7 +9,7 @@ class SwiftyDmg < Formula
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release"
     bin.install ".build/release/swifty-dmg"
-    bin.install ".build/release/*.bundle"
+    bin.install Dir[".build/release/*.bundle"]
   end
 
   test do
