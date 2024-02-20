@@ -8,8 +8,18 @@ class SwiftyDmg < Formula
 
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release"
-    bin.install ".build/release/swifty-dmg"
-    bin.install Dir[".build/release/*.bundle"]
+    # bin.install ".build/release/swifty-dmg"
+    # bin.install Dir[".build/release/*.bundle"]
+    # 安装可执行文件和相关资源到 libexec 目录
+    libexec.install ".build/release/swifty-dmg"
+    libexec.install Dir[".build/release/*.bundle"]
+
+    # 创建包装脚本
+    (bin/"swifty-dmg").write <<~EOS
+      #!/bin/bash
+      "#{libexec}/swifty-dmg" "$@"
+    EOS
+
   end
 
   test do
